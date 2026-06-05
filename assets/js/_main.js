@@ -113,13 +113,12 @@ $(document).ready(function () {
     // Show elements for the selected language
     $(`[data-lang="${lang}"]`).removeClass('lang-hidden');
 
-    // Add/remove 'active' class to buttons for styling
-    $('#language-en-toggle').removeClass('active');
-    $('#language-zh-toggle').removeClass('active');
+    // Update button text to reflect the current language
+    const languageText = $('#language-text');
     if (lang === 'en') {
-      $('#language-en-toggle').addClass('active');
+      languageText.text('中文'); // Button shows "中文" to switch to Chinese
     } else {
-      $('#language-zh-toggle').addClass('active');
+      languageText.text('EN'); // Button shows "EN" to switch to English
     }
     // Save preference
     localStorage.setItem('site-language', lang);
@@ -129,13 +128,11 @@ $(document).ready(function () {
   let initialLang = localStorage.getItem('site-language') || 'en'; // Default to English
   setLanguage(initialLang);
 
-  // Set language on button click
-  $('#language-en-toggle').on('click', function() {
-    setLanguage('en');
-  });
-
-  $('#language-zh-toggle').on('click', function() {
-    setLanguage('zh');
+  // Toggle language on button click
+  $('#language-toggle').on('click', function() {
+    let currentLang = localStorage.getItem('site-language') || 'en';
+    let newLang = currentLang === 'en' ? 'zh' : 'en';
+    setLanguage(newLang);
   });
 
   // Enable the sticky footer

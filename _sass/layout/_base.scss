@@ -19,18 +19,13 @@ body {
   line-height: 1.5;
 
   &.overflow--hidden {
-    /* when primary navigation is visible, the content in the background won't scroll */
+    /* when primary navigation is visible, the content in the background won\'t scroll */
     overflow: hidden;
   }
 }
 
 .lang-hidden {
   display: none !important;
-}
-
-.masthead__menu-item.active a {
-  color: var(--global-masthead-link-color-hover) !important;
-  background-color: var(--global-border-color) !important; // Or some other subtle highlight
 }
 
 /* Timeline Styling */
