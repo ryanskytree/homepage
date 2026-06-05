@@ -26,8 +26,8 @@ author:
   avatar           : "profile.png"
   name             : "Xuling Zhang"
   pronouns         : # example: "she/her"  
-  bio              : "I am an Algorithm Engineer at 360 Company, with a Master's degree from Universiti Sains Malaysia. I was a visiting student at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, under the guidance of Prof. Yang Min and Prof. Tan Minghuan, and an intern at The Hong Kong University of Science and Technology (Guangzhou) under Prof. Yang Menglin. My publications include ICASSP and ICML, and my main research areas are Large Language Models, Graph Neural Networks, Incremental Learning, and Multimodal Learning."
-  location         : "Earth"
+  bio              : "Algorithm Engineer at 360 Company. Researching Large Language Models, Graph Neural Networks, Incremental Learning, and Multimodal Learning. Master's from USM."
+  location         : "Beijing"
   employer         : "360 Company"
   uri              : # URL
   email            : "xling.zhang@outlook.com" 
@@ -35,13 +35,12 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=ON-RcMgAAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/my-orcid?orcid=0009-0004-7358-8076"
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
