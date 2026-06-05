@@ -77,6 +77,43 @@ if (plotlyElements.length > 0) {
         }
         Plotly.react(chartElement, jsonData.data, jsonData.layout);
       });
+
+/* ==========================================================================
+   Language switching functions
+   ========================================================================== */
+
+$(document).ready(function () {
+  const languageToggle = $('#language-toggle');
+  const languageText = $('#language-text');
+
+  // Function to set the language
+  function setLanguage(lang) {
+    // Hide all language-specific elements
+    $('[data-lang]').addClass('lang-hidden');
+    // Show elements for the selected language
+    $(`[data-lang="${lang}"]`).removeClass('lang-hidden');
+
+    // Update button text
+    if (lang === 'en') {
+      languageText.text('EN');
+    } else {
+      languageText.text('中文');
+    }
+    // Save preference
+    localStorage.setItem('site-language', lang);
+  }
+
+  // Initialize language on page load
+  let initialLang = localStorage.getItem('site-language') || 'en'; // Default to English
+  setLanguage(initialLang);
+
+  // Toggle language on button click
+  languageToggle.on('click', function() {
+    let currentLang = localStorage.getItem('site-language') || 'en';
+    let newLang = currentLang === 'en' ? 'zh' : 'en';
+    setLanguage(newLang);
+  });
+});
     }
   });
 }
