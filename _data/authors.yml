@@ -1,13 +1,13 @@
 # Authors
 
-Name Name:
-  name        : "Name Name"
-  uri         : "https://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
+Xuling Zhang:
+  name        : "Xuling Zhang"
+  uri         : ""
+  email       : "xling.zhang@outlook.com"
+  bio         : "我是360公司的一名算法工程师，硕士毕业于马来西亚理科大学，在中科院深圳先进研究院在杨敏老师和谭明环教授的指导下做过访问学生，在香港科技大学广州 杨梦林教授下做过实习生。发表论文在ICASSP ICML，主要研究方向是大模型、图神经网络、增量学习、多模态。"
+  avatar      : "profile.png"
+  twitter     : ""
+  google_plus : ""
 
 Name2 Name2:
   name        : "Name2 Name2"
