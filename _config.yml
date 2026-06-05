@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Xuling Zhang's Homepage"
 title_separator          : "-"
 name                     : &name "Xuling Zhang"
-description              : &description "研究兴趣包括大模型、机器学习、图神经网络、增量学习、多模态。"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Research interests include Large Language Models, Machine Learning, Graph Neural Networks, Incremental Learning, and Multimodal Learning."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://ryanskytree.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "/homepage" # the subpath of your site, e.g. " /blog"
@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Xuling Zhang"
   pronouns         : # example: "she/her"  
-  bio              : "我是360公司的一名算法工程师，硕士毕业于马来西亚理科大学，在中科院深圳先进研究院在杨敏老师和谭明环教授的指导下做过访问学生，在香港科技大学广州 杨梦林教授下做过实习生。发表论文在ICASSP ICML，主要研究方向是大模型、图神经网络、增量学习、多模态。"
+  bio              : "I am an Algorithm Engineer at 360 Company, with a Master's degree from Universiti Sains Malaysia. I was a visiting student at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, under the guidance of Prof. Yang Min and Prof. Tan Minghuan, and an intern at The Hong Kong University of Science and Technology (Guangzhou) under Prof. Yang Menglin. My publications include ICASSP and ICML, and my main research areas are Large Language Models, Graph Neural Networks, Incremental Learning, and Multimodal Learning."
   location         : "Earth"
-  employer         : "360公司"
+  employer         : "360 Company"
   uri              : # URL
   email            : "xling.zhang@outlook.com" 
 
