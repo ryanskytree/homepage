@@ -52,5 +52,10 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f0f6fc;
     --global-thead-color                : #21262d;
+
+    // Morandi colors for Timeline
+    --morandi-point-color               : #6c757d; // Muted blue-gray
+    --morandi-item-bg-color             : #1a1e24; // Slightly lighter than background
+    --morandi-bold-color                : #98d7c2; // Muted teal for emphasis
 }
 

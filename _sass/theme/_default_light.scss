@@ -44,5 +44,10 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+
+    // Morandi colors for Timeline
+    --morandi-point-color               : #A2B2BF; // Muted blue
+    --morandi-item-bg-color             : #F8F8F8; // Light gray
+    --morandi-bold-color                : #6C7A89; // Darker blue-gray
 }
 

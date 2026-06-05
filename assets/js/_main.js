@@ -77,43 +77,6 @@ if (plotlyElements.length > 0) {
         }
         Plotly.react(chartElement, jsonData.data, jsonData.layout);
       });
-
-/* ==========================================================================
-   Language switching functions
-   ========================================================================== */
-
-$(document).ready(function () {
-  const languageToggle = $('#language-toggle');
-  const languageText = $('#language-text');
-
-  // Function to set the language
-  function setLanguage(lang) {
-    // Hide all language-specific elements
-    $('[data-lang]').addClass('lang-hidden');
-    // Show elements for the selected language
-    $(`[data-lang="${lang}"]`).removeClass('lang-hidden');
-
-    // Update button text
-    if (lang === 'en') {
-      languageText.text('EN');
-    } else {
-      languageText.text('中文');
-    }
-    // Save preference
-    localStorage.setItem('site-language', lang);
-  }
-
-  // Initialize language on page load
-  let initialLang = localStorage.getItem('site-language') || 'en'; // Default to English
-  setLanguage(initialLang);
-
-  // Toggle language on button click
-  languageToggle.on('click', function() {
-    let currentLang = localStorage.getItem('site-language') || 'en';
-    let newLang = currentLang === 'en' ? 'zh' : 'en';
-    setLanguage(newLang);
-  });
-});
     }
   });
 }
@@ -138,6 +101,42 @@ $(document).ready(function () {
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
+
+  /* ==========================================================================
+     Language switching functions
+     ========================================================================== */
+
+  // Function to set the language
+  function setLanguage(lang) {
+    // Hide all language-specific elements
+    $('[data-lang]').addClass('lang-hidden');
+    // Show elements for the selected language
+    $(`[data-lang="${lang}"]`).removeClass('lang-hidden');
+
+    // Add/remove 'active' class to buttons for styling
+    $('#language-en-toggle').removeClass('active');
+    $('#language-zh-toggle').removeClass('active');
+    if (lang === 'en') {
+      $('#language-en-toggle').addClass('active');
+    } else {
+      $('#language-zh-toggle').addClass('active');
+    }
+    // Save preference
+    localStorage.setItem('site-language', lang);
+  }
+
+  // Initialize language on page load
+  let initialLang = localStorage.getItem('site-language') || 'en'; // Default to English
+  setLanguage(initialLang);
+
+  // Set language on button click
+  $('#language-en-toggle').on('click', function() {
+    setLanguage('en');
+  });
+
+  $('#language-zh-toggle').on('click', function() {
+    setLanguage('zh');
+  });
 
   // Enable the sticky footer
   var bumpIt = function () {

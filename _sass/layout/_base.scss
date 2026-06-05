@@ -28,6 +28,105 @@ body {
   display: none !important;
 }
 
+.masthead__menu-item.active a {
+  color: var(--global-masthead-link-color-hover) !important;
+  background-color: var(--global-border-color) !important; // Or some other subtle highlight
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em 0;
+  list-style: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--global-border-color);
+    margin-left: -1px;
+    @include breakpoint(max-width($small)) {
+      left: 20px;
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1em 2em;
+  box-sizing: border-box;
+
+  &:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    padding-right: 3em;
+    @include breakpoint(max-width($small)) {
+      left: 0;
+      padding-left: 3em;
+      text-align: left;
+    }
+  }
+
+  &:nth-child(even) {
+    left: 50%;
+    padding-left: 3em;
+    @include breakpoint(max-width($small)) {
+      left: 0;
+      padding-left: 3em;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--morandi-point-color); // Morandi color point
+    border: 2px solid var(--global-bg-color);
+    top: 1.5em;
+    border-radius: 50%;
+    z-index: 1;
+
+    .timeline-item:nth-child(odd) & {
+      right: -6px;
+      @include breakpoint(max-width($small)) {
+        left: 14px;
+      }
+    }
+    .timeline-item:nth-child(even) & {
+      left: -6px;
+      @include breakpoint(max-width($small)) {
+        left: 14px;
+      }
+    }
+  }
+
+  .timeline-date {
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.5em;
+  }
+
+  .timeline-content {
+    background: var(--morandi-item-bg-color); // Morandi background
+    padding: 1em;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    color: var(--global-text-color);
+    line-height: 1.6;
+
+    b {
+      color: var(--morandi-bold-color); // Morandi bold color
+    }
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;

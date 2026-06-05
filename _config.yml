@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Xuling Zhang's Homepage"
+title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Xuling Zhang"
 description              : &description "Research interests include Large Language Models, Machine Learning, Graph Neural Networks, Incremental Learning, and Multimodal Learning."   # Update this with a general description of your site, this is the default if not overridden by a page
