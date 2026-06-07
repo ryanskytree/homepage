@@ -58,7 +58,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/usm_logo.png" alt="USM Logo">
+    <img src="{{ base_path }}/images/logos/usm_logo.png" alt="USM Logo">
   </div>
   <div class="cv-entry-content">
     <h2>Universiti Sains Malaysia (USM)</h2>
@@ -79,7 +79,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/yit_logo.png" alt="YIT Logo">
+    <img src="{{ base_path }}/images/logos/yit_logo.png" alt="YIT Logo">
   </div>
   <div class="cv-entry-content">
     <h2>Yingkou Institute of Technology</h2>
@@ -106,7 +106,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/hkust_gz_logo.png" alt="HKUST(GZ) Logo">
+    <img src="{{ base_path }}/images/logos/hkust_gz_logo.svg" alt="HKUST(GZ) Logo">
   </div>
   <div class="cv-entry-content">
     <h2>Hong Kong University of Science and Technology (Guangzhou)</h2>
@@ -133,7 +133,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/siat_cas_logo.png" alt="SIAT CAS Logo">
+    <img src="{{ base_path }}/images/logos/siat_cas_logo.png" alt="SIAT CAS Logo">
   </div>
   <div class="cv-entry-content">
     <h2>Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h2>
@@ -159,7 +159,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/sf_tech_logo.png" alt="SF Technology Logo">
+    <img src="{{ base_path }}/images/logos/sf_tech_logo.png" alt="SF Technology Logo">
   </div>
   <div class="cv-entry-content">
     <h2>SF Technology</h2>
@@ -190,7 +190,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/lazada_logo.png" alt="Lazada Logo">
+    <img src="{{ base_path }}/images/logos/lazada_logo.png" alt="Lazada Logo">
   </div>
   <div class="cv-entry-content">
     <h2>Lazada</h2>
@@ -220,7 +220,7 @@ redirect_from:
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="/images/logos/360_logo.png" alt="360 Logo">
+    <img src="{{ base_path }}/images/logos/360_logo.png" alt="360 Logo">
   </div>
   <div class="cv-entry-content">
     <h2>360 Digital Security Group</h2>
