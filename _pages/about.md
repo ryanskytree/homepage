@@ -13,7 +13,7 @@ I am **Xuling Zhang**, an Algorithm Engineer at 360 Company, with a profound int
 
 My academic journey includes pursuing a Master of Computer Science at Universiti Sains Malaysia (USM). I had the privilege of being a visiting student at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, mentored by <a href="https://minyang.me/">Prof. Yang Min</a> and <a href="https://www.xinhai.co/">Prof. Tan Minghuan</a>. Additionally, I gained valuable experience as an intern at The Hong Kong University of Science and Technology (Guangzhou) under the guidance of <a href="https://yangmenglinsite.github.io/">Prof. Yang Menglin</a>. My work has been published in leading conferences such as ICASSP and ICML.
 
-Feel free to reach out to me at xling.zhang@outlook.com.
+Feel free to reach out to me at <a href="mailto:xling.zhang@outlook.com">xling.zhang@outlook.com</a>.
 
 ---
 
@@ -44,7 +44,7 @@ Feel free to reach out to me at xling.zhang@outlook.com.
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">Mar 2025 – Sep 2025</div>
+    <div class="timeline-date">Feb 2025 – Jun 2025</div>
     <div class="timeline-content">
       <img class="timeline-logo" src="/homepage/images/logos/sf_tech_logo.png" alt="SF Technology Logo">
       <span>SF Technology</span> - AI Engineer Intern

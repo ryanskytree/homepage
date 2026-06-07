@@ -164,7 +164,7 @@ redirect_from:
   <div class="cv-entry-content">
     <h2>SF Technology</h2>
     <p><strong>AI Engineer Intern</strong></p>
-    <p>Mar 2025 – Sep 2025</p>
+    <p>Feb 2025 – Jun 2025</p>
     <h3>Project</h3>
     <p>Multimodal Financial Shared-Service LLM System</p>
     <h3>Technologies</h3>
@@ -294,28 +294,21 @@ redirect_from:
 
 # Academic Vision
 
-My long-term goal is to bridge graph intelligence and foundation models to build continual, interpretable, and trustworthy AI systems capable of adapting to evolving real-world environments.
+My long-term research vision centers on **Multimodal World Models** and **Continual AI Systems**. I believe the next frontier of artificial intelligence lies at the intersection of multimodal perception and persistent learning — building agents that can continuously perceive, reason, and adapt across visual, linguistic, and structured modalities without forgetting previously acquired knowledge.
 
+Specifically, I am passionate about:
 
+* **Multimodal Large Language Models (MLLMs):** Developing foundation models that unify vision, language, and structured data understanding, enabling seamless cross-modal reasoning for real-world applications.
+* **World Models & Embodied Intelligence:** Constructing internal world representations that allow AI systems to simulate, predict, and plan in complex, dynamic environments — bridging the gap between perception and action.
+* **Continual & Lifelong Learning:** Designing learning paradigms that enable AI systems to accumulate knowledge over time without catastrophic forgetting, maintaining plasticity for new tasks while preserving stability for old ones.
+* **Trustworthy & Interpretable AI:** Ensuring that as these systems grow more powerful, they remain transparent, robust, and aligned with human values.
+
+I envision a future where AI systems can learn continuously from multimodal streams of experience, build coherent world models, and generalize across tasks and domains — much like humans do. This pursuit drives my work at the intersection of graph learning, multimodal reasoning, and continual adaptation.
+
+---
 
 # Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
