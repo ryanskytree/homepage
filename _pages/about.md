@@ -54,7 +54,7 @@ Feel free to reach out to me at <a href="mailto:xling.zhang@outlook.com">xling.z
   <div class="timeline-item">
     <div class="timeline-date">Jan 2025 – Aug 2025</div>
     <div class="timeline-content">
-      <img class="timeline-logo" src="/homepage/images/logos/hkust_gz_logo.png" alt="HKUST (Guangzhou) Logo">
+      <img class="timeline-logo" src="/homepage/images/logos/hkust_gz_logo.svg" alt="HKUST (Guangzhou) Logo">
       <span>Hong Kong University of Science and Technology (Guangzhou)</span> - Research Assistant
     </div>
   </div>

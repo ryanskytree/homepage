@@ -34,9 +34,9 @@
       "endDate": "Present",
       "summary": "AI Security Engineer",
       "highlights": [
-        "主导对Qwen Deepseek系列模型结构改造，创新性的引入视觉编码器，将超长安全日志文本转换为像素到像素的映射问题，显著提高模型效果，已经被ICML2026收录。",
-        "设计并实现多智能体协同框架，构建多级别工具图书馆系统，支持大语言模型多路召回机制，显著提升了信息检索和融合的效率与准确性，文章在NIPS 2026 under review中。",
-        "对NDR的日志json文件进行数据分析，采用llamafactory对qwen3 14b微调，使用coe架构，优化长尾分布问题的算法，提升模型效果从82%到95%。"
+        "Led the structural modification of Qwen and Deepseek series models, innovatively introducing a vision encoder to transform ultra-long security log texts into a pixel-to-pixel mapping problem, significantly improving model performance (Accepted by ICML 2026).",
+        "Designed and implemented a multi-agent collaborative framework, built a multi-level tool library system, and supported a multi-way recall mechanism for LLMs, significantly enhancing the efficiency and accuracy of information retrieval and fusion (Under review at NeurIPS 2026).",
+        "Conducted data analysis on NDR log JSON files, fine-tuned Qwen3-14B using LlamaFactory with a CoE architecture, and optimized algorithms for long-tail distribution problems, improving model performance from 82% to 95%."
       ],
       "logo": "/images/logos/360_logo.png"
     },
