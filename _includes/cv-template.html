@@ -13,6 +13,49 @@
       width: 70%;
     }
   }
+
+  .cv-item-with-logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .cv-item-logo {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cv-item-logo img {
+    max-width: 56px;
+    max-height: 56px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  .cv-item-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    .cv-item-with-logo {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .cv-item-logo {
+      width: 48px;
+      height: 48px;
+    }
+    .cv-item-logo img {
+      max-width: 48px;
+      max-height: 48px;
+    }
+  }
 </style>
 
 <div class="cv-container">
@@ -71,24 +114,33 @@
   {% if cv.education.size > 0 %}
   <!-- Education -->
   <div class="cv-section">
-    <h2>Education</h2>
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
     <ul class="cv-list">
       {% for education in cv.education %}
       <li class="cv-item">
-        <div class="cv-item-header">
-          <div class="cv-item-title">{{ education.area }}</div>
-          <div class="cv-item-date">{{ education.endDate }}</div>
-        </div>
-        <div class="cv-item-content">
-          <div class="cv-item-subtitle">{{ education.institution }}</div>
-          {% if education.gpa %}
-          <div class="cv-item-detail">GPA: {{ education.gpa }}</div>
-          {% endif %}
-          {% if education.courses.size > 0 %}
-          <div class="cv-item-detail">
-            <strong>Courses:</strong> {{ education.courses | join: ", " }}
+        <div class="cv-item-with-logo">
+          {% if education.logo %}
+          <div class="cv-item-logo">
+            <img src="{{ education.logo }}" alt="{{ education.institution }} logo">
           </div>
           {% endif %}
+          <div class="cv-item-body">
+            <div class="cv-item-header">
+              <div class="cv-item-title">{{ education.area }}</div>
+              <div class="cv-item-date">{{ education.startDate }}{% if education.endDate %} – {{ education.endDate }}{% endif %}</div>
+            </div>
+            <div class="cv-item-content">
+              <div class="cv-item-subtitle">{{ education.institution }}</div>
+              {% if education.gpa %}
+              <div class="cv-item-detail">GPA: {{ education.gpa }}</div>
+              {% endif %}
+              {% if education.courses.size > 0 %}
+              <div class="cv-item-detail">
+                <strong>Courses:</strong> {{ education.courses | join: ", " }}
+              </div>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </li>
       {% endfor %}
@@ -99,26 +151,35 @@
   {% if cv.work.size > 0 %}
   <!-- Work Experience -->
   <div class="cv-section">
-    <h2>Work Experience</h2>
+    <h2><i class="fas fa-briefcase"></i> Work & Research Experience</h2>
     <ul class="cv-list">
       {% for work in cv.work %}
       <li class="cv-item">
-        <div class="cv-item-header">
-          <div class="cv-item-title">{{ work.position }}</div>
-          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate %} - {{ work.endDate }}{% endif %}</div>
-        </div>
-        <div class="cv-item-content">
-          <div class="cv-item-subtitle">{{ work.company }}</div>
-          {% if work.summary %}
-          <div class="cv-item-detail">{{ work.summary }}</div>
+        <div class="cv-item-with-logo">
+          {% if work.logo %}
+          <div class="cv-item-logo">
+            <img src="{{ work.logo }}" alt="{{ work.company }} logo">
+          </div>
           {% endif %}
-          {% if work.highlights.size > 0 %}
-          <ul class="cv-highlights">
-            {% for highlight in work.highlights %}
-            <li>{{ highlight }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+          <div class="cv-item-body">
+            <div class="cv-item-header">
+              <div class="cv-item-title">{{ work.position }}</div>
+              <div class="cv-item-date">{{ work.startDate }}{% if work.endDate %} – {{ work.endDate }}{% endif %}</div>
+            </div>
+            <div class="cv-item-content">
+              <div class="cv-item-subtitle">{{ work.company }}</div>
+              {% if work.summary %}
+              <div class="cv-item-detail">{{ work.summary }}</div>
+              {% endif %}
+              {% if work.highlights.size > 0 %}
+              <ul class="cv-highlights">
+                {% for highlight in work.highlights %}
+                <li>{{ highlight }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
         </div>
       </li>
       {% endfor %}
@@ -129,7 +190,7 @@
   {% if cv.skills.size > 0 %}
   <!-- Skills -->
   <div class="cv-section">
-    <h2>Skills</h2>
+    <h2><i class="fas fa-cogs"></i> Skills</h2>
     <div class="cv-skills">
       {% for skill in cv.skills %}
       <div class="cv-skill-category">
@@ -148,7 +209,7 @@
   {% if cv.publications.size > 0 %}
   <!-- Publications -->
   <div class="cv-section">
-    <h2>Publications</h2>
+    <h2><i class="fas fa-book"></i> Publications</h2>
     <ul class="cv-list">
       {% for publication in cv.publications %}
       <li class="cv-item">
@@ -176,7 +237,7 @@
   {% if cv.presentations.size > 0 %}
   <!-- Presentations/Talks -->
   <div class="cv-section">
-    <h2>Presentations</h2>
+    <h2><i class="fas fa-chalkboard-teacher"></i> Presentations</h2>
     <ul class="cv-list">
       {% for talk in cv.presentations %}
       <li class="cv-item">
@@ -202,7 +263,7 @@
   {% if cv.teaching.size > 0 %}
   <!-- Teaching -->
   <div class="cv-section">
-    <h2>Teaching</h2>
+    <h2><i class="fas fa-chalkboard"></i> Teaching</h2>
     <ul class="cv-list">
       {% for teaching in cv.teaching %}
       <li class="cv-item">
@@ -228,7 +289,7 @@
   {% if cv.portfolio.size > 0 %}
   <!-- Portfolio -->
   <div class="cv-section">
-    <h2>Portfolio</h2>
+    <h2><i class="fas fa-project-diagram"></i> Portfolio</h2>
     <ul class="cv-list">
       {% for item in cv.portfolio %}
       <li class="cv-item">
@@ -256,7 +317,7 @@
   {% if cv.languages.size > 0 %}
   <!-- Languages -->
   <div class="cv-section">
-    <h2>Languages</h2>
+    <h2><i class="fas fa-language"></i> Languages</h2>
     <ul class="cv-list">
       {% for language in cv.languages %}
       <li class="cv-item">
@@ -273,7 +334,7 @@
   {% if cv.interests.size > 0 %}
   <!-- Interests -->
   <div class="cv-section">
-    <h2>Interests</h2>
+    <h2><i class="fas fa-heart"></i> Interests</h2>
     <ul class="cv-list">
       {% for interest in cv.interests %}
       <li class="cv-item">
@@ -292,7 +353,7 @@
   {% if cv.references.size > 0 %}
   <!-- References -->
   <div class="cv-section">
-    <h2>References</h2>
+    <h2><i class="fas fa-users"></i> References</h2>
     <ul class="cv-list">
       {% for reference in cv.references %}
       <li class="cv-item">

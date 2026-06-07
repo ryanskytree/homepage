@@ -1,16 +1,16 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
+    "name": "Xuling Zhang",
     "email": "none@example.org",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://ryanskytree.github.io/homepage",
+    "summary": "AI researcher focusing on Graph Neural Networks, Continual Learning, and Multimodal AI Systems.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Shenzhen",
+      "countryCode": "CN",
+      "region": "Guangdong"
     },
     "profiles": [
       {
@@ -19,134 +19,138 @@
         "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
       },
       {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "ryanskytree",
+        "url": "https://github.com/ryanskytree"
       }
     ]
   },
-  "work": [],
-  "education": [
+  "work": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "company": "360 Digital Security Group",
+      "position": "AI Security Engineer",
+      "website": "",
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "summary": "Working on AI security and threat intelligence.",
+      "highlights": [],
+      "logo": "/images/logos/360_logo.png"
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
+      "company": "SF Technology",
+      "position": "AI Engineer Intern",
+      "website": "",
+      "startDate": "2025-03",
+      "endDate": "2025-09",
+      "summary": "Multimodal Financial Shared-Service LLM System",
+      "highlights": [
+        "Fine-tuned multimodal LLMs for logistics and financial documents.",
+        "Built OCR pipelines for invoice understanding.",
+        "Applied object detection for cargo verification.",
+        "Integrated multimodal reasoning into financial workflows."
+      ],
+      "logo": "/images/logos/sf_tech_logo.png"
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "company": "Lazada",
+      "position": "Data Mining & Recommendation Intern",
+      "website": "",
+      "startDate": "2024-06",
+      "endDate": "2024-12",
+      "summary": "E-commerce recommendation system development.",
+      "highlights": [
+        "Conducted CTR and CVR analysis.",
+        "Built recommendation and ranking models.",
+        "Implemented UserCF, ItemCF, SVD, and NMF.",
+        "Applied Learning-to-Rank techniques.",
+        "Evaluated models using AUC and Precision-Recall metrics."
+      ],
+      "logo": "/images/logos/lazada_logo.png"
+    },
+    {
+      "company": "Hong Kong University of Science and Technology (Guangzhou)",
+      "position": "Research Assistant",
+      "website": "",
+      "startDate": "2025-01",
+      "endDate": "2025-08",
+      "summary": "Replay-Free Continual Graph Learning",
+      "highlights": [
+        "Designed an analytic learning framework for continual graph learning.",
+        "Eliminated replay buffers to preserve privacy and reduce storage cost.",
+        "Developed recursive least squares based memory updates.",
+        "Constructed recursive correlation memory matrices for stable knowledge retention."
+      ],
+      "logo": "/images/logos/hkust_gz_logo.png"
+    },
+    {
+      "company": "Shenzhen Institute of Advanced Technology, CAS",
+      "position": "Research Collaborator",
+      "website": "",
+      "startDate": "2024-12",
+      "endDate": "2025-06",
+      "summary": "Multimodal Large Language Model Alignment",
+      "highlights": [
+        "Built a benchmark covering eight multimodal chemistry tasks.",
+        "Investigated DPO and GRPO based multimodal alignment strategies.",
+        "Improved cross-modal consistency through balanced optimization.",
+        "Enhanced transferability across heterogeneous reasoning tasks."
+      ],
+      "logo": "/images/logos/siat_cas_logo.png"
     }
   ],
-  "skills": [],
+  "education": [
+    {
+      "institution": "Universiti Sains Malaysia (USM)",
+      "area": "Master of Computer Science",
+      "studyType": "Master",
+      "startDate": "2023-10",
+      "endDate": "2025-03",
+      "gpa": "3.3 / 4.0",
+      "courses": ["Deep Learning", "Multimodal Learning", "Internet of Things", "Algorithm Design"],
+      "logo": "/images/logos/usm_logo.png"
+    },
+    {
+      "institution": "Yingkou Institute of Technology",
+      "area": "Bachelor of Intelligent Science and Technology",
+      "studyType": "Bachelor",
+      "startDate": "2018-09",
+      "endDate": "2022-06",
+      "gpa": "3.2 / 4.0",
+      "courses": ["Machine Learning", "Data Mining", "Big Data Analytics", "Data Visualization"],
+      "logo": "/images/logos/yit_logo.png"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Python", "C++", "SQL"]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": ["PyTorch", "PyTorch Geometric", "DGL", "Scikit-Learn"]
+    },
+    {
+      "name": "Research Areas",
+      "keywords": ["Graph Neural Networks", "Continual Learning", "Large Language Models", "Multimodal Learning", "AI Security"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["Linux", "Git", "LaTeX", "Docker", "LlamaFactory"]
+    }
+  ],
   "languages": [],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "AL-GNN: Privacy-Preserving and Replay-Free Continual Graph Learning via Analytic Learning",
+      "publisher": "ICASSP 2026",
+      "releaseDate": "2025-12-01",
+      "website": "",
+      "summary": "Oral Paper - Designed an analytic learning framework for continual graph learning that eliminates replay buffers."
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "presentations": [],
+  "teaching": [],
+  "portfolio": []
 }

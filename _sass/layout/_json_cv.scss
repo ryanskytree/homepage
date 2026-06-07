@@ -86,6 +86,49 @@
   list-style-type: none;
 }
 
+.cv-item-with-logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.cv-item-logo {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-item-logo img {
+  max-width: 56px;
+  max-height: 56px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.cv-item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .cv-item-with-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .cv-item-logo {
+    width: 48px;
+    height: 48px;
+  }
+  .cv-item-logo img {
+    max-width: 48px;
+    max-height: 48px;
+  }
+}
+
 .cv-item-header {
   display: flex;
   justify-content: space-between;
