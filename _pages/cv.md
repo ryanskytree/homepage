@@ -5,6 +5,10 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
+toc: true
+toc_label: "Contents"
+toc_icon: "list"
+toc_sticky: true
 ---
 
 {% include base_path %}
@@ -102,60 +106,26 @@ redirect_from:
 
 ---
 
-# Research Experience
+# Work Experience
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="{{ base_path }}/images/logos/hkust_gz_logo.svg" alt="HKUST(GZ) Logo">
+    <img src="{{ base_path }}/images/logos/360_logo.png" alt="360 Logo">
   </div>
   <div class="cv-entry-content">
-    <h2>Hong Kong University of Science and Technology (Guangzhou)</h2>
-    <p><strong>Research Assistant</strong></p>
-    <p>Jan 2025 – Aug 2025</p>
-    <h3>Topic</h3>
-    <p>Replay-Free Continual Graph Learning</p>
-    <h3>Research Problem</h3>
-    <p>Graph neural networks suffer from catastrophic forgetting when new classes or tasks arrive continuously.</p>
+    <h2>360 Digital Security Group</h2>
+    <p><strong>AI Security Engineer</strong></p>
+    <p>Sep 2025 – Present</p>
     <h3>Contributions</h3>
     <ul>
-      <li>Designed an analytic learning framework for continual graph learning.</li>
-      <li>Eliminated replay buffers to preserve privacy and reduce storage cost.</li>
-      <li>Developed recursive least squares based memory updates.</li>
-      <li>Constructed recursive correlation memory matrices for stable knowledge retention.</li>
-      <li>Improved training efficiency while maintaining competitive performance.</li>
-    </ul>
-    <h3>Representative Work</h3>
-    <p>AL-GNN: Privacy-Preserving and Replay-Free Continual Graph Learning via Analytic Learning</p>
-  </div>
-</div>
-
----
-
-<div class="cv-entry">
-  <div class="cv-entry-logo">
-    <img src="{{ base_path }}/images/logos/siat_cas_logo.png" alt="SIAT CAS Logo">
-  </div>
-  <div class="cv-entry-content">
-    <h2>Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h2>
-    <p><strong>Research Collaborator</strong></p>
-    <p>Dec 2024 – Jun 2025</p>
-    <h3>Topic</h3>
-    <p>Multimodal Large Language Model Alignment</p>
-    <h3>Research Problem</h3>
-    <p>Existing multimodal foundation models show weak generalization on scientific and chemical reasoning tasks.</p>
-    <h3>Contributions</h3>
-    <ul>
-      <li>Built a benchmark covering eight multimodal chemistry tasks.</li>
-      <li>Investigated DPO and GRPO based multimodal alignment strategies.</li>
-      <li>Improved cross-modal consistency through balanced optimization.</li>
-      <li>Enhanced transferability across heterogeneous reasoning tasks.</li>
+      <li>主导对Qwen Deepseek系列模型结构改造，创新性的引入视觉编码器，将超长安全日志文本转换为像素到像素的映射问题，显著提高模型效果，已经被ICML2026收录。</li>
+      <li>设计并实现多智能体协同框架，构建多级别工具图书馆系统，支持大语言模型多路召回机制，显著提升了信息检索和融合的效率与准确性，文章在NIPS 2026 under review中。</li>
+      <li>对NDR的日志json文件进行数据分析，采用llamafactory对qwen3 14b微调，使用coe架构，优化长尾分布问题的算法，提升模型效果从82%到95%。</li>
     </ul>
   </div>
 </div>
 
 ---
-
-# Industrial Experience
 
 <div class="cv-entry">
   <div class="cv-entry-logo">
@@ -218,17 +188,53 @@ redirect_from:
 
 ---
 
+# Research Experience
+
 <div class="cv-entry">
   <div class="cv-entry-logo">
-    <img src="{{ base_path }}/images/logos/360_logo.png" alt="360 Logo">
+    <img src="{{ base_path }}/images/logos/hkust_gz_logo.svg" alt="HKUST(GZ) Logo">
   </div>
   <div class="cv-entry-content">
-    <h2>360 Digital Security Group</h2>
-    <p><strong>AI Security Engineer</strong></p>
-    <p>Sep 2025 – Present</p>
+    <h2>Hong Kong University of Science and Technology (Guangzhou)</h2>
+    <p><strong>Research Assistant</strong></p>
+    <p>Jan 2025 – Aug 2025</p>
+    <h3>Topic</h3>
+    <p>Replay-Free Continual Graph Learning</p>
+    <h3>Research Problem</h3>
+    <p>Graph neural networks suffer from catastrophic forgetting when new classes or tasks arrive continuously.</p>
     <h3>Contributions</h3>
     <ul>
-      <li>Working on AI security and threat intelligence.</li>
+      <li>Designed an analytic learning framework for continual graph learning.</li>
+      <li>Eliminated replay buffers to preserve privacy and reduce storage cost.</li>
+      <li>Developed recursive least squares based memory updates.</li>
+      <li>Constructed recursive correlation memory matrices for stable knowledge retention.</li>
+      <li>Improved training efficiency while maintaining competitive performance.</li>
+    </ul>
+    <h3>Representative Work</h3>
+    <p>AL-GNN: Privacy-Preserving and Replay-Free Continual Graph Learning via Analytic Learning</p>
+  </div>
+</div>
+
+---
+
+<div class="cv-entry">
+  <div class="cv-entry-logo">
+    <img src="{{ base_path }}/images/logos/siat_cas_logo.png" alt="SIAT CAS Logo">
+  </div>
+  <div class="cv-entry-content">
+    <h2>Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</h2>
+    <p><strong>Research Collaborator</strong></p>
+    <p>Dec 2024 – Jun 2025</p>
+    <h3>Topic</h3>
+    <p>Multimodal Large Language Model Alignment</p>
+    <h3>Research Problem</h3>
+    <p>Existing multimodal foundation models show weak generalization on scientific and chemical reasoning tasks.</p>
+    <h3>Contributions</h3>
+    <ul>
+      <li>Built a benchmark covering eight multimodal chemistry tasks.</li>
+      <li>Investigated DPO and GRPO based multimodal alignment strategies.</li>
+      <li>Improved cross-modal consistency through balanced optimization.</li>
+      <li>Enhanced transferability across heterogeneous reasoning tasks.</li>
     </ul>
   </div>
 </div>
