@@ -115,6 +115,18 @@ body {
     b {
       color: var(--morandi-bold-color); // Morandi bold color
     }
+
+    .timeline-logo {
+      float: left; // Align logo to the left
+      margin-right: 1em; // Space between logo and text
+      width: 40px; // Fixed width for logos
+      height: 40px; // Fixed height for logos
+      object-fit: contain; // Ensure image fits without cropping
+      border-radius: 50%; // Make logos circular if desired
+      background-color: var(--global-bg-color); // Background for logos
+      padding: 5px; // Padding around logo
+      box-shadow: $box-shadow; // Optional shadow
+    }
   }
 }
 
