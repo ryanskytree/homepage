@@ -1,14 +1,10 @@
 ---
-layout: single
+layout: archive
 title: "Xuling Zhang's CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
-toc: true
-toc_label: "Contents"
-toc_icon: "list"
-toc_sticky: true
 ---
 
 {% include base_path %}
@@ -56,7 +52,84 @@ toc_sticky: true
     margin-bottom: 0.5rem;
   }
 }
+
+/* Custom CV TOC */
+.cv-toc {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 180px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  background: var(--global-bg-color, #fff);
+  border: 1px solid var(--global-border-color, #e1e4e8);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 100;
+  font-size: 0.85rem;
+  transition: opacity 0.3s ease;
+}
+
+.cv-toc h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  color: var(--global-text-color, #333);
+  border-bottom: 1px solid var(--global-border-color, #e1e4e8);
+  padding-bottom: 0.4rem;
+}
+
+.cv-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-toc li {
+  margin-bottom: 0.4rem;
+}
+
+.cv-toc a {
+  color: var(--global-text-color, #555);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.cv-toc a:hover {
+  color: var(--global-primary-color, #0366d6);
+  background: rgba(3, 102, 214, 0.05);
+}
+
+.cv-toc a.active {
+  color: var(--global-primary-color, #0366d6);
+  border-left-color: var(--global-primary-color, #0366d6);
+  background: rgba(3, 102, 214, 0.08);
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .cv-toc {
+    display: none;
+  }
+}
 </style>
+
+<nav class="cv-toc" id="cv-toc">
+  <h4>📋 Contents</h4>
+  <ul>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#work-experience">Work Experience</a></li>
+    <li><a href="#research-experience">Research Experience</a></li>
+    <li><a href="#technical-skills">Technical Skills</a></li>
+    <li><a href="#awards-and-honors">Awards and Honors</a></li>
+    <li><a href="#academic-vision">Academic Vision</a></li>
+    <li><a href="#publications">Publications</a></li>
+  </ul>
+</nav>
 
 # Education
 
@@ -318,3 +391,43 @@ I envision a future where AI systems can learn continuously from multimodal stre
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scrolling for TOC links
+  var tocLinks = document.querySelectorAll('.cv-toc a');
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Highlight current section in TOC on scroll
+  var sections = [];
+  tocLinks.forEach(function(link) {
+    var id = link.getAttribute('href').substring(1);
+    var el = document.getElementById(id);
+    if (el) sections.push({ id: id, el: el, link: link });
+  });
+
+  function updateActive() {
+    var scrollPos = window.scrollY + 120;
+    var current = null;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].el.offsetTop <= scrollPos) {
+        current = sections[i];
+      }
+    }
+    tocLinks.forEach(function(l) { l.classList.remove('active'); });
+    if (current) current.link.classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateActive);
+  updateActive();
+});
+</script>
