@@ -111,7 +111,7 @@ redirect_from:
   font-weight: 600;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .cv-toc {
     display: none;
   }
