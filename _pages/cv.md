@@ -53,72 +53,61 @@ redirect_from:
   }
 }
 
-/* Custom CV TOC */
-.cv-toc {
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 180px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
+/* Custom CV TOC - inline version for all screens */
+.cv-toc-inline {
   background: var(--global-bg-color, #fff);
   border: 1px solid var(--global-border-color, #e1e4e8);
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 100;
-  font-size: 0.85rem;
-  transition: opacity 0.3s ease;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.cv-toc h4 {
-  margin: 0 0 0.6rem 0;
-  font-size: 0.9rem;
+.cv-toc-inline h4 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
   color: var(--global-text-color, #333);
-  border-bottom: 1px solid var(--global-border-color, #e1e4e8);
-  padding-bottom: 0.4rem;
 }
 
-.cv-toc ul {
+.cv-toc-inline ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
 }
 
-.cv-toc li {
-  margin-bottom: 0.4rem;
+.cv-toc-inline li {
+  margin: 0;
 }
 
-.cv-toc a {
+.cv-toc-inline a {
   color: var(--global-text-color, #555);
   text-decoration: none;
-  display: block;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+  border: 1px solid var(--global-border-color, #e1e4e8);
+  display: inline-block;
 }
 
-.cv-toc a:hover {
+.cv-toc-inline a:hover {
   color: var(--global-primary-color, #0366d6);
+  border-color: var(--global-primary-color, #0366d6);
   background: rgba(3, 102, 214, 0.05);
+  transform: translateY(-1px);
 }
 
-.cv-toc a.active {
-  color: var(--global-primary-color, #0366d6);
-  border-left-color: var(--global-primary-color, #0366d6);
-  background: rgba(3, 102, 214, 0.08);
-  font-weight: 600;
-}
-
-@media (max-width: 1280px) {
-  .cv-toc {
-    display: none;
-  }
+.cv-toc-inline a.active {
+  color: #fff;
+  background: var(--global-primary-color, #0366d6);
+  border-color: var(--global-primary-color, #0366d6);
 }
 </style>
 
-<nav class="cv-toc" id="cv-toc">
+<nav class="cv-toc-inline" id="cv-toc">
   <h4>📋 Contents</h4>
   <ul>
     <li><a href="#education">Education</a></li>
@@ -395,7 +384,7 @@ I envision a future where AI systems can learn continuously from multimodal stre
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Smooth scrolling for TOC links
-  var tocLinks = document.querySelectorAll('.cv-toc a');
+  var tocLinks = document.querySelectorAll('.cv-toc-inline a');
   tocLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
