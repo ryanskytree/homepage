@@ -14,6 +14,65 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<style>
+.venue-chip {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: #c9b8a8;
+  color: #4f433b;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.oral-chip {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: #aebfb3;
+  color: #31453a;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.publication-detail-poster {
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+}
+
+.publication-detail-poster img {
+  width: min(100%, 760px);
+  max-height: 900px;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 14px 36px rgba(35, 40, 52, 0.14);
+  background: #fff;
+}
+
+.publication-authors {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  background: rgba(248, 246, 243, 0.88);
+  border: 1px solid rgba(120, 128, 140, 0.18);
+}
+
+.publication-authors__title {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.publication-authors__list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.publication-authors__list li {
+  margin-bottom: 0.5rem;
+}
+</style>
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -37,7 +96,11 @@ layout: default
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p>
+            Published in <span class="venue-chip">{{ page.venue }}</span>
+            {% if page.oral %}<span class="oral-chip">Oral</span>{% endif %}
+            , {{ page.date | default: "1900-01-01" | date: "%Y" }}
+          </p>
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
@@ -46,6 +109,17 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+
+        {% if page.authors %}
+          <div class="publication-authors">
+            <h3 class="publication-authors__title">Authors and Affiliations</h3>
+            <ul class="publication-authors__list">
+              {% for author in page.authors %}
+                <li><strong>{{ author.name }}</strong> — {{ author.affiliation }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
@@ -83,14 +157,10 @@ layout: default
         {% include page__taxonomy.html %}
       </footer>
 
-      {% if page.share %}{% include social-share.html %}{% endif %}
-
-      {% include post_pagination.html %}
+      {% if site.comments.provider and page.comments %}
+        {% include comments.html %}
+      {% endif %}
     </div>
-
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
   </article>
 
   {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}

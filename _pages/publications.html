@@ -5,15 +5,137 @@ permalink: /publications/
 author_profile: true
 ---
 
+<style>
+.publication-card {
+  margin-bottom: 1.6rem;
+}
+
+.publication-card__inner {
+  display: flex;
+  align-items: stretch;
+  gap: 1.25rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(120, 128, 140, 0.18);
+  border-radius: 16px;
+  background: rgba(248, 246, 243, 0.88);
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.06);
+}
+
+.publication-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.publication-card__content li {
+  list-style: none;
+}
+
+.publication-card__title {
+  margin-bottom: 0.6rem;
+}
+
+.publication-card__citation {
+  margin-bottom: 0;
+}
+
+.publication-card__poster {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.poster-thumb-trigger {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.poster-thumb-trigger img {
+  display: block;
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(30, 34, 44, 0.14);
+}
+
+.publication-poster-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(20, 24, 32, 0.38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+}
+
+.publication-poster-modal.is-open {
+  display: flex;
+}
+
+.publication-poster-modal__image {
+  max-width: min(90vw, 900px);
+  max-height: 88vh;
+  border-radius: 16px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  cursor: zoom-out;
+  background: #fff;
+}
+
+.venue-chip {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: #c9b8a8;
+  color: #4f433b;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.oral-chip {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  background: #aebfb3;
+  color: #31453a;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .publication-card__inner {
+    flex-direction: column;
+  }
+
+  .publication-card__poster {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .poster-thumb-trigger img {
+    width: 180px;
+    max-width: 100%;
+  }
+}
+</style>
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}
@@ -23,14 +145,47 @@ author_profile: true
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      {% include archive-single-cv.html %}
     {% endfor %}
   {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    {% include archive-single-cv.html %}
   {% endfor %}
 {% endif %}
 
+<div class="publication-poster-modal" id="publication-poster-modal" aria-hidden="true">
+  <img class="publication-poster-modal__image" id="publication-poster-modal-image" src="" alt="Expanded poster preview">
+</div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('publication-poster-modal');
+  const modalImage = document.getElementById('publication-poster-modal-image');
+  const triggers = document.querySelectorAll('.poster-thumb-trigger');
 
+  triggers.forEach(function(trigger) {
+    trigger.addEventListener('click', function() {
+      modalImage.src = trigger.dataset.posterSrc;
+      modalImage.alt = trigger.dataset.posterAlt || 'Expanded poster preview';
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    modalImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  modal.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+});
+</script>
