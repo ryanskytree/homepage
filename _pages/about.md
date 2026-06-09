@@ -11,7 +11,7 @@ redirect_from:
 
 I am **Xuling Zhang**, an Algorithm Engineer at 360 Company, with a profound interest in **Multimodal Large Language Models, Multi-Agent Collaboration, and World Models**. My research expertise spans various domains including Graph Machine Learning, Continual Learning, and AI Security, focusing on developing efficient, scalable, and interpretable learning systems.
 
-My academic journey includes pursuing a Master of Computer Science at Universiti Sains Malaysia (USM). I had the privilege of being a visiting student at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, mentored by <a href="https://minyang.me/">Prof. Yang Min</a> and <a href="https://www.xinhai.co/">Prof. Tan Minghuan</a>. Additionally, I gained valuable experience as an intern at The Hong Kong University of Science and Technology (Guangzhou) under the guidance of <a href="https://yangmenglinsite.github.io/">Prof. Yang Menglin</a>. My work has been published in leading conferences such as ICASSP and ICML.
+My academic journey includes pursuing a Master of Computer Science at Universiti Sains Malaysia (USM). I had the privilege of being a visiting student at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, mentored by <a href="https://minyang.me/">Prof. Min Yang</a> and <a href="https://www.xinhai.co/">Prof. Minghuan Tan</a>. Additionally, I gained valuable experience as an intern at The Hong Kong University of Science and Technology (Guangzhou) under the guidance of <a href="https://yangmenglinsite.github.io/">Prof. Menglin Yang</a>. My work has been published in leading conferences such as ICASSP and ICML.
 
 Feel free to reach out to me at <a href="mailto:xling.zhang@outlook.com">xling.zhang@outlook.com</a>.
 

@@ -39,7 +39,7 @@ We propose a hybrid neural network: LSTM predicts future population inflow and o
 Our model improves R² from 0.908 (BPNN alone) to **0.942**, and reduces RMSE from 100.47 (BPNN alone) to **83.15**, demonstrating superior predictive accuracy.
 
 <div class="publication-detail-poster">
-  <img src="{{ base_path }}/images/paperposter/covid.png" alt="Poster for A COVID-19 Prediction Model Based on Neural Network">
+  <img src="https://ryanskytree.github.io/homepage/images/paperposter/covid.png" alt="Poster for A COVID-19 Prediction Model Based on Neural Network">
 </div>
 
 ## Authors and Affiliations

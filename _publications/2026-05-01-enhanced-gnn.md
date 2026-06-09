@@ -38,7 +38,7 @@ We propose K-Hop Gaussian Diffusion (KHG), a novel diffusion kernel with Gaussia
 KHG improves accuracy on Cora from 86.2% (DPPNP) to **87.3%**, and on PubMed from 75.4% (DPPNP) to **76.7%**, consistently outperforming existing diffusion methods and GNN baselines.
 
 <div class="publication-detail-poster">
-  <img src="{{ base_path }}/images/paperposter/Enhanced Graph Neural NetworksGaussian .png" alt="Poster for Enhanced Graph Neural Networks Using K-Hop Gaussian Diffusion">
+  <img src="https://ryanskytree.github.io/homepage/images/paperposter/Enhanced%20Graph%20Neural%20NetworksGaussian%20.png" alt="Poster for Enhanced Graph Neural Networks Using K-Hop Gaussian Diffusion">
 </div>
 
 ## Authors and Affiliations

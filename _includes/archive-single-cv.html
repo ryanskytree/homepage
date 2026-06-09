@@ -25,7 +25,7 @@
         </h3>
 
         <p class="publication-card__meta">
-          {{ post.venue_full | default: post.venue }}
+          {{ post.venue_full | default: post.venue }}.
           {% if post.venue_abbr %}
             <span class="abbr-chip">{{ post.venue_abbr }}</span>
           {% endif %}

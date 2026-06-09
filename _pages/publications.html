@@ -73,23 +73,36 @@ author_profile: true
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(30, 34, 44, 0.14);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.poster-thumb-trigger:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(30, 34, 44, 0.18);
 }
 
 .publication-poster-modal {
   position: fixed;
   inset: 0;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: rgba(20, 24, 32, 0.38);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(20, 24, 32, 0.20);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, backdrop-filter 0.35s ease, -webkit-backdrop-filter 0.35s ease, background 0.35s ease;
   z-index: 2000;
 }
 
 .publication-poster-modal.is-open {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(20, 24, 32, 0.38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .publication-poster-modal__image {
@@ -99,6 +112,14 @@ author_profile: true
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
   cursor: zoom-out;
   background: #fff;
+  transform: scale(0.88);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.publication-poster-modal.is-open .publication-poster-modal__image {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .abbr-chip {
@@ -188,8 +209,12 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeModal() {
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
-    modalImage.src = '';
     document.body.style.overflow = '';
+    window.setTimeout(function() {
+      if (!modal.classList.contains('is-open')) {
+        modalImage.src = '';
+      }
+    }, 350);
   }
 
   modal.addEventListener('click', closeModal);

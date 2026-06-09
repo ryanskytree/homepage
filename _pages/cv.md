@@ -80,6 +80,21 @@ redirect_from:
   color: var(--global-text-color, #333);
 }
 
+.cv-toc-right .toc-icon {
+  width: 1.2rem;
+  text-align: center;
+  margin-right: 0.45rem;
+  color: #8b7d73;
+}
+
+.cv-publication-list .publication-card__poster {
+  display: none;
+}
+
+.cv-publication-list .publication-card__meta {
+  margin-bottom: 0.25rem;
+}
+
 .cv-toc-right ul {
   list-style: none;
   margin: 0;
@@ -143,15 +158,15 @@ redirect_from:
 <div id="cv-top" class="cv-page-anchor"></div>
 
 <nav class="cv-toc-right" id="cv-toc">
-  <h4>📋 Contents</h4>
+  <h4>Contents</h4>
   <ul>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#work-experience">Work Experience</a></li>
-    <li><a href="#research-experience">Research Experience</a></li>
-    <li><a href="#technical-skills">Technical Skills</a></li>
-    <li><a href="#awards-and-honors">Awards and Honors</a></li>
-    <li><a href="#academic-vision">Academic Vision</a></li>
-    <li><a href="#publications">Publications</a></li>
+    <li><a href="#education"><span class="toc-icon">🎓</span>Education</a></li>
+    <li><a href="#work-experience"><span class="toc-icon">💼</span>Work Experience</a></li>
+    <li><a href="#research-experience"><span class="toc-icon">🔬</span>Research Experience</a></li>
+    <li><a href="#technical-skills"><span class="toc-icon">🛠️</span>Technical Skills</a></li>
+    <li><a href="#awards-and-honors"><span class="toc-icon">🏆</span>Awards and Honors</a></li>
+    <li><a href="#academic-vision"><span class="toc-icon">🌍</span>Academic Vision</a></li>
+    <li><a href="#publications"><span class="toc-icon">📚</span>Publications</a></li>
   </ul>
   <div class="cv-toc-divider"></div>
   <a href="#cv-top" class="cv-back-to-top">↑ Back to Top</a>
@@ -414,9 +429,9 @@ I envision a future where AI systems can learn continuously from multimodal stre
 
 # Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  <div class="cv-publication-list"><ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
