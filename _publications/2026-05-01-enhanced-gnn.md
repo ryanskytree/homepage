@@ -6,6 +6,8 @@ permalink: /publication/2026-05-01-enhanced-gnn
 excerpt: 'This work proposes K-Hop Gaussian Diffusion (KHG), a graph diffusion kernel designed to improve information propagation beyond traditional message passing.'
 date: 2026-05-01
 venue: 'ICASSP 2026'
+venue_full: 'IEEE International Conference on Acoustics, Speech, and Signal Processing 2026'
+venue_abbr: 'ICASSP 2026'
 oral: true
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11462070'
 poster: '/images/paperposter/Enhanced Graph Neural NetworksGaussian .png'
@@ -22,12 +24,18 @@ authors:
     affiliation: 'Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, China'
   - name: 'Yongkui Yang'
     affiliation: 'Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, China'
-citation: 'Zhang, X., Wang, P., Li, D., Huang, A., Chen, Z., & Yang, Y. (2026). "Enhanced Graph Neural Networks Using K-Hop Gaussian Diffusion." <span class="venue-chip">ICASSP 2026</span> <span class="oral-chip">Oral</span>.'
 ---
 
 ## Overview
 
-This work proposes K-Hop Gaussian Diffusion (KHG), a graph diffusion kernel designed to improve information propagation beyond traditional message passing.
+**Problem & Motivation**  
+Existing GNNs rely on 1-hop message passing, failing to capture long-range dependencies and suffering from noisy or missing edges. Global diffusion kernels like PPR and Heat Kernel often propagate distant node noise.
+
+**Our Approach**  
+We propose K-Hop Gaussian Diffusion (KHG), a novel diffusion kernel with Gaussian weighting over multi-hop neighbors. It balances local and global information, suppresses distant noise, and is plug-and-play with any GNN backbone.
+
+**Results**  
+KHG improves accuracy on Cora from 86.2% (DPPNP) to **87.3%**, and on PubMed from 75.4% (DPPNP) to **76.7%**, consistently outperforming existing diffusion methods and GNN baselines.
 
 <div class="publication-detail-poster">
   <img src="{{ base_path }}/images/paperposter/Enhanced Graph Neural NetworksGaussian .png" alt="Poster for Enhanced Graph Neural Networks Using K-Hop Gaussian Diffusion">
@@ -42,27 +50,24 @@ This work proposes K-Hop Gaussian Diffusion (KHG), a graph diffusion kernel desi
 * **Zeiwei Chen** — Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, China
 * **Yongkui Yang** — Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, China
 
-## Key Contributions
-
-* Introduced a Gaussian-weighted multi-hop diffusion mechanism.
-* Enhanced long-range information propagation.
-* Suppressed noisy distant node influence.
-* Served as a plug-and-play preprocessing module.
-* Improved robustness under noisy graph structures.
-
-## Experimental Results
-
-* Evaluated on multiple benchmark datasets.
-* Consistently outperformed standard GNNs.
-* Surpassed PPR and Heat Kernel diffusion methods.
-* Achieved superior performance on complex graph structures.
-
 ## Research Area
 
 * Graph Neural Networks
 * Graph Diffusion
 * Graph Representation Learning
 
-## Keywords
+## Key Contributions
 
-Graph Neural Networks, Graph Diffusion, Semi-Supervised Learning
+* Introduced a Gaussian-weighted multi-hop diffusion mechanism over graph neighborhoods.
+* Improved long-range information propagation while mitigating the effect of distant noisy nodes.
+* Built a plug-and-play diffusion module that can be integrated with multiple GNN backbones.
+* Consistently outperformed existing diffusion-based GNN baselines on benchmark datasets.
+
+## Publication Details
+
+* Venue: IEEE International Conference on Acoustics, Speech, and Signal Processing 2026 (ICASSP 2026)
+* Presentation Type: Oral
+
+## Download
+
+[Download Paper](https://ieeexplore.ieee.org/abstract/document/11462070)

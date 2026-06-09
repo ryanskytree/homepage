@@ -15,7 +15,7 @@ layout: default
 {% endif %}
 
 <style>
-.venue-chip {
+.abbr-chip {
   display: inline-block;
   padding: 0.12rem 0.55rem;
   border-radius: 999px;
@@ -36,6 +36,11 @@ layout: default
   font-weight: 600;
 }
 
+.publication-detail-meta {
+  margin: 0.25rem 0 1.5rem;
+  line-height: 1.9;
+}
+
 .publication-detail-poster {
   margin: 1.5rem 0 2rem;
   text-align: center;
@@ -48,28 +53,6 @@ layout: default
   border-radius: 18px;
   box-shadow: 0 14px 36px rgba(35, 40, 52, 0.14);
   background: #fff;
-}
-
-.publication-authors {
-  margin: 1rem 0 1.5rem;
-  padding: 1rem 1.2rem;
-  border-radius: 14px;
-  background: rgba(248, 246, 243, 0.88);
-  border: 1px solid rgba(120, 128, 140, 0.18);
-}
-
-.publication-authors__title {
-  margin-top: 0;
-  margin-bottom: 0.8rem;
-}
-
-.publication-authors__list {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.publication-authors__list li {
-  margin-bottom: 0.5rem;
 }
 </style>
 
@@ -89,37 +72,24 @@ layout: default
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        
-        {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>
-            Published in <span class="venue-chip">{{ page.venue }}</span>
-            {% if page.oral %}<span class="oral-chip">Oral</span>{% endif %}
-            , {{ page.date | default: "1900-01-01" | date: "%Y" }}
-          </p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}    
+          {% if page.modified %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+          {% endif %}
+
+          {% if page.venue_full or page.venue %}
+            <p class="publication-detail-meta">
+              {{ page.venue_full | default: page.venue }}
+              {% if page.venue_abbr %}<span class="abbr-chip">{{ page.venue_abbr }}</span>{% endif %}
+              {% if page.oral %}<span class="oral-chip">Oral</span>{% endif %}
+            </p>
+          {% elsif page.date %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+          {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
-
-        {% if page.authors %}
-          <div class="publication-authors">
-            <h3 class="publication-authors__title">Authors and Affiliations</h3>
-            <ul class="publication-authors__list">
-              {% for author in page.authors %}
-                <li><strong>{{ author.name }}</strong> — {{ author.affiliation }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
@@ -128,7 +98,7 @@ layout: default
         {% elsif page.citation and page.paperurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a></p>
+          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Download Paper</a></p>
         {% elsif page.citation and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.slidesurl %}
@@ -139,12 +109,8 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.paperurl %}
+          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Download Paper</a></p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

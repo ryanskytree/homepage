@@ -5,10 +5,13 @@ category: conferences
 permalink: /publication/2021-01-01-covid19-prediction
 excerpt: 'This paper proposes an LSTM+BPNN neural network model to predict COVID-19 development trends using urban population mobility data.'
 date: 2021-01-01
-venue: '2021 IEEE International Conference on Advances in Electrical Engineering and Computer Applications (AEECA)'
+venue: 'AEECA 2021'
+venue_full: '2021 IEEE International Conference on Advances in Electrical Engineering and Computer Applications'
+venue_abbr: 'AEECA 2021'
 oral: true
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/9574278'
 poster: '/images/paperposter/covid.png'
+doi: '10.1109/AEECA52519.2021.9574278'
 authors:
   - name: 'Xuling Zhang'
     affiliation: 'Yingkou Institute of Technology, College of Electrical Engineering, Yingkou, China'
@@ -22,14 +25,18 @@ authors:
     affiliation: 'Yingkou Institute of Technology, College of Electrical Engineering, Yingkou, China'
   - name: 'Fuxue Li'
     affiliation: 'Yingkou Institute of Technology, College of Electrical Engineering, Yingkou, China'
-citation: 'Zhang, X., Yan, H., Zhang, Z., Zhang, J., Zhang, R., & Li, F. (2021). "A COVID-19 Prediction Model Based on Neural Network." <span class="venue-chip">2021 IEEE International Conference on Advances in Electrical Engineering and Computer Applications (AEECA)</span> <span class="oral-chip">Oral</span>. DOI: 10.1109/AEECA52519.2021.9574278.'
 ---
 
 ## Overview
 
-The emergence and spread of COVID-19 has had a huge negative impact on society. The use of machine learning methods and big data technology to study the spread and development of the epidemic is a hot topic for many scholars.
+**Problem & Motivation**  
+Accurate epidemic trend prediction is critical. Population mobility is a key factor, but existing models fail to effectively capture its complex temporal relationship with COVID-19 cases.
 
-This paper proposes a model based on the LSTM+BPNN neural network, which predicts the development trend of the COVID-19 epidemic through migration data of urban population flows, and proves the effectiveness of the model through a large number of experiments.
+**Our Approach**  
+We propose a hybrid neural network: LSTM predicts future population inflow and outflow from historical migration data, and BPNN models the nonlinear mapping from mobility to future confirmed cases.
+
+**Results**  
+Our model improves R² from 0.908 (BPNN alone) to **0.942**, and reduces RMSE from 100.47 (BPNN alone) to **83.15**, demonstrating superior predictive accuracy.
 
 <div class="publication-detail-poster">
   <img src="{{ base_path }}/images/paperposter/covid.png" alt="Poster for A COVID-19 Prediction Model Based on Neural Network">
@@ -44,20 +51,25 @@ This paper proposes a model based on the LSTM+BPNN neural network, which predict
 * **Rui Zhang** — Yingkou Institute of Technology, College of Electrical Engineering, Yingkou, China
 * **Fuxue Li** — Yingkou Institute of Technology, College of Electrical Engineering, Yingkou, China
 
+## Research Area
+
+* Epidemic Forecasting
+* Neural Networks
+* Population Mobility Analysis
+
 ## Key Contributions
 
-* Proposed a hybrid LSTM+BPNN neural network for epidemic trend prediction.
-* Leveraged urban population mobility data to model COVID-19 spread dynamics.
-* Validated the effectiveness of the proposed model through extensive experiments.
-* Demonstrated the value of combining machine learning and big data for epidemic forecasting.
+* Proposed a hybrid LSTM+BPNN architecture for epidemic trend prediction.
+* Modeled the relationship between migration dynamics and future confirmed cases.
+* Demonstrated that temporal mobility patterns significantly improve forecasting accuracy.
+* Validated the framework through extensive experiments on COVID-19 data.
 
 ## Publication Details
 
-* Conference: 2021 IEEE International Conference on Advances in Electrical Engineering and Computer Applications (AEECA)
+* Venue: 2021 IEEE International Conference on Advances in Electrical Engineering and Computer Applications (AEECA 2021)
 * Presentation Type: Oral
 * DOI: 10.1109/AEECA52519.2021.9574278
-* Paper Link: [Download Paper](https://ieeexplore.ieee.org/abstract/document/9574278)
 
-## Keywords
+## Download
 
-COVID-19 Prediction, Neural Network, LSTM, BPNN, Epidemic Forecasting, Population Mobility, Machine Learning
+[Download Paper](https://ieeexplore.ieee.org/abstract/document/9574278)

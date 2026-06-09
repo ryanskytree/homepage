@@ -23,12 +23,23 @@
             <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
           {% endif %}
         </h3>
-        {% if post.read_time %}
-          <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-        {% endif %}
-        {% if post.citation %}
-          <p class="archive__item-excerpt publication-card__citation" itemprop="description">{{ post.citation }}</p>
-        {% endif %}
+
+        <p class="publication-card__meta">
+          {{ post.venue_full | default: post.venue }}
+          {% if post.venue_abbr %}
+            <span class="abbr-chip">{{ post.venue_abbr }}</span>
+          {% endif %}
+          {% if post.oral %}
+            <span class="oral-chip">Oral</span>
+          {% endif %}
+        </p>
+
+        <div class="publication-card__links">
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">View details</a>
+          {% if post.paperurl and post.paperurl != '' %}
+            | <a href="{{ post.paperurl }}">Download paper</a>
+          {% endif %}
+        </div>
       </li>
     </div>
 
