@@ -230,7 +230,7 @@ redirect_from:
     <h2>360 Digital Security Group</h2>
     <p><strong>Large Model Algorithm Engineer</strong></p>
     <p>Aug 2025 – Present</p>
-    <h3>Project: WatchLog (EDR Log Security Analysis Framework)</h3>
+    <h3>WatchLog (EDR Log Security Analysis Framework) <span class="venue-chip">ICML 2026</span> <span class="oral-chip">Regular</span></h3>
     <ul>
       <li>Proposed and developed <strong>WatchLog</strong>, a multimodal LLM framework that transforms ultra-long EDR log sequences (up to 1M tokens) into video-like structures for efficient and interpretable event reasoning.</li>
       <li>Designed a novel <code>kvEmbedding</code> layer to encode key-value log events into image tensors, and applied temporal cross-attention to compress long sequences into fixed-length representations, significantly reducing computational overhead.</li>
@@ -238,13 +238,18 @@ redirect_from:
       <li>Achieved <strong>99.8% binary classification accuracy</strong> and <strong>100% recall</strong> on the custom EDR8M-20R dataset, outperforming traditional methods and fine-tuned LLMs.</li>
       <li>Reduced inference latency by <strong>over 200x</strong> (first-token latency of 1.11s) and GPU memory usage by <strong>50.6%</strong> (48.6GB for 1024K tokens) compared to Qwen2.5-7B, enabling single-GPU processing of million-token logs.</li>
     </ul>
-    <h3>Project: PSIFrame (Self-Evolving LLM Multi-Agent Framework)</h3>
+    <h3>PSIFrame (Self-Evolving LLM Multi-Agent Framework) <span class="venue-chip">NeurIPS 2026</span> <span class="oral-chip">Under Review</span></h3>
     <ul>
       <li>Developed <strong>PSIFrame</strong>, a self-evolving multi-agent framework designed to overcome the limitations of static workflows and flat tool selection in dynamic, open-world environments.</li>
       <li>Constructed a hierarchical Taxonomy Graph for tool organization, enabling top-down, task-aware routing through functional and executable agents.</li>
       <li>Integrated Monte Carlo Tree Search (MCTS) with an adversarial debate module for adaptive planning, execution, and dynamic backtracking based on environmental feedback.</li>
       <li>Improved tool retrieval <strong>NDCG@10 by 21.3%</strong> and <strong>Recall@10 by 19.8%</strong> on the MetaTool dataset, while <strong>reducing token consumption by ~50%</strong>.</li>
       <li>Achieved an <strong>80.0% task success rate</strong> on a custom open-world multi-agent benchmark (BenchVerse), significantly outperforming baselines like MetaAgent (68.0%).</li>
+    </ul>
+    <h3>NDR Large Model Distillation (Ongoing)</h3>
+    <ul>
+      <li>Conducting data analysis on NDR log JSON files and fine-tuning Qwen3-14B using LlamaFactory with a CoE architecture.</li>
+      <li>Optimizing algorithms to address long-tail distribution problems, successfully improving model performance from 82% to 93% to date.</li>
     </ul>
   </div>
 </div>
