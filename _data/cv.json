@@ -34,9 +34,10 @@
       "endDate": "Present",
       "summary": "Large Model Algorithm Engineer",
       "highlights": [
-        "Led the structural modification of Qwen and Deepseek series models, innovatively introducing a vision encoder to transform ultra-long security log texts into a pixel-to-pixel mapping problem, significantly improving model performance (Accepted by ICML 2026).",
-        "Designed and implemented a multi-agent collaborative framework, built a multi-level tool library system, and supported a multi-way recall mechanism for LLMs, significantly enhancing the efficiency and accuracy of information retrieval and fusion (Under review at NeurIPS 2026).",
-        "Conducted data analysis on NDR log JSON files, fine-tuned Qwen3-14B using LlamaFactory with a CoE architecture, and optimized algorithms for long-tail distribution problems, improving model performance from 82% to 95%."
+        "Proposed WatchLog, a multimodal LLM framework that transforms ultra-long EDR log sequences into video-like structures, achieving 99.8% accuracy while reducing inference latency by over 200x.",
+        "Designed a kvEmbedding layer and applied temporal cross-attention to compress up to 1M token sequences into fixed-length representations.",
+        "Developed PSIFrame, a self-evolving multi-agent framework using a hierarchical Taxonomy Graph for tool organization and MCTS for adaptive planning.",
+        "Improved tool retrieval NDCG@10 by 21.3% and reduced token consumption by ~50% using PSIFrame on the MetaTool dataset."
       ],
       "logo": "/images/logos/360_logo.png"
     },
