@@ -228,8 +228,8 @@ redirect_from:
   </div>
   <div class="cv-entry-content">
     <h2>360 Digital Security Group</h2>
-    <p><strong>AI Security Engineer</strong></p>
-    <p>Sep 2025 – Present</p>
+    <p><strong>Large Model Algorithm Engineer</strong></p>
+    <p>Aug 2025 – Present</p>
     <h3>Contributions</h3>
     <ul>
       <li>Led the structural modification of Qwen and Deepseek series models, innovatively introducing a vision encoder to transform ultra-long security log texts into a pixel-to-pixel mapping problem, significantly improving model performance (Accepted by ICML 2026).</li>
@@ -262,10 +262,10 @@ redirect_from:
     </ul>
     <h3>Contributions</h3>
     <ul>
-      <li>Fine-tuned multimodal LLMs for logistics and financial documents.</li>
-      <li>Built OCR pipelines for invoice understanding.</li>
-      <li>Applied object detection for cargo verification.</li>
-      <li>Integrated multimodal reasoning into financial workflows.</li>
+      <li>Fine-tuned multimodal LLMs (e.g., Qwen-VL, LLaVA) using LoRA and SFT for logistics and financial document understanding, improving information extraction accuracy from 85% to 96%.</li>
+      <li>Built and optimized OCR pipelines using YOLOv5 and CRNN for complex invoice and receipt parsing, increasing parsing precision by 15% and reducing processing time per document by 40%.</li>
+      <li>Applied object detection models for automated cargo verification and anomaly detection, enhancing the robust performance of the vision system under varying lighting conditions.</li>
+      <li>Integrated multimodal reasoning capabilities into financial shared-service workflows, reducing manual verification workload by 60%.</li>
     </ul>
   </div>
 </div>
@@ -291,11 +291,10 @@ redirect_from:
     </ul>
     <h3>Contributions</h3>
     <ul>
-      <li>Conducted CTR and CVR analysis.</li>
-      <li>Built recommendation and ranking models.</li>
-      <li>Implemented UserCF, ItemCF, SVD, and NMF.</li>
-      <li>Applied Learning-to-Rank techniques.</li>
-      <li>Evaluated models using AUC and Precision-Recall metrics.</li>
+      <li>Conducted deep-dive CTR and CVR analysis on user behavior data to identify key features driving user engagement and conversion.</li>
+      <li>Built and deployed robust recommendation and ranking models using XGBoost and LightGBM, improving overall CTR by 12% and CVR by 8%.</li>
+      <li>Implemented collaborative filtering algorithms (UserCF, ItemCF) and matrix factorization techniques (SVD, NMF) to alleviate the cold-start problem, increasing recommendation coverage by 20%.</li>
+      <li>Applied Learning-to-Rank (L2R) techniques to optimize the ranking phase of the recommendation pipeline, yielding a 5% improvement in NDCG@10.</li>
     </ul>
   </div>
 </div>

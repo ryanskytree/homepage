@@ -28,11 +28,11 @@
   "work": [
     {
       "company": "360 Digital Security Group",
-      "position": "AI Security Engineer",
+      "position": "Large Model Algorithm Engineer",
       "website": "",
-      "startDate": "2025-09",
+      "startDate": "2025-08",
       "endDate": "Present",
-      "summary": "AI Security Engineer",
+      "summary": "Large Model Algorithm Engineer",
       "highlights": [
         "Led the structural modification of Qwen and Deepseek series models, innovatively introducing a vision encoder to transform ultra-long security log texts into a pixel-to-pixel mapping problem, significantly improving model performance (Accepted by ICML 2026).",
         "Designed and implemented a multi-agent collaborative framework, built a multi-level tool library system, and supported a multi-way recall mechanism for LLMs, significantly enhancing the efficiency and accuracy of information retrieval and fusion (Under review at NeurIPS 2026).",
@@ -48,10 +48,10 @@
       "endDate": "2025-06",
       "summary": "Multimodal Financial Shared-Service LLM System",
       "highlights": [
-        "Fine-tuned multimodal LLMs for logistics and financial documents.",
-        "Built OCR pipelines for invoice understanding.",
-        "Applied object detection for cargo verification.",
-        "Integrated multimodal reasoning into financial workflows."
+        "Fine-tuned multimodal LLMs (e.g., Qwen-VL, LLaVA) using LoRA and SFT for logistics and financial document understanding, improving information extraction accuracy from 85% to 96%.",
+        "Built and optimized OCR pipelines using YOLOv5 and CRNN for complex invoice and receipt parsing, increasing parsing precision by 15% and reducing processing time per document by 40%.",
+        "Applied object detection models for automated cargo verification and anomaly detection, enhancing the robust performance of the vision system under varying lighting conditions.",
+        "Integrated multimodal reasoning capabilities into financial shared-service workflows, reducing manual verification workload by 60%."
       ],
       "logo": "/images/logos/sf_tech_logo.png"
     },
@@ -63,11 +63,10 @@
       "endDate": "2024-12",
       "summary": "E-commerce recommendation system development.",
       "highlights": [
-        "Conducted CTR and CVR analysis.",
-        "Built recommendation and ranking models.",
-        "Implemented UserCF, ItemCF, SVD, and NMF.",
-        "Applied Learning-to-Rank techniques.",
-        "Evaluated models using AUC and Precision-Recall metrics."
+        "Conducted deep-dive CTR and CVR analysis on user behavior data to identify key features driving user engagement and conversion.",
+        "Built and deployed robust recommendation and ranking models using XGBoost and LightGBM, improving overall CTR by 12% and CVR by 8%.",
+        "Implemented collaborative filtering algorithms (UserCF, ItemCF) and matrix factorization techniques (SVD, NMF) to alleviate the cold-start problem, increasing recommendation coverage by 20%.",
+        "Applied Learning-to-Rank (L2R) techniques to optimize the ranking phase of the recommendation pipeline, yielding a 5% improvement in NDCG@10."
       ],
       "logo": "/images/logos/lazada_logo.png"
     },
