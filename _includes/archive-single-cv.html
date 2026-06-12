@@ -39,6 +39,9 @@
           {% if post.paperurl and post.paperurl != '' %}
             | <a href="{{ post.paperurl }}">Download paper</a>
           {% endif %}
+          {% if post.codeurl and post.codeurl != '' %}
+            | <a href="{{ post.codeurl }}">Code</a>
+          {% endif %}
         </div>
       </li>
     </div>

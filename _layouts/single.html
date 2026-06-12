@@ -92,7 +92,10 @@ layout: default
         {{ content }}
 
         {% if page.paperurl and page.paperurl != '' %}
-          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Download Paper</a></p>
+          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Download Paper</a>
+          {% if page.codeurl and page.codeurl != '' %} | <a href="{{ page.codeurl }}">Code Repository</a>{% endif %}</p>
+        {% elsif page.codeurl and page.codeurl != '' %}
+          <p style="font-size: smaller"><a href="{{ page.codeurl }}">Code Repository</a></p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
