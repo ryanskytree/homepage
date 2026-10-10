@@ -1,101 +1,118 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Xuling Zhang · Personal Homepage
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+<p align="center">
+  <img src="images/profile.png" alt="Xuling Zhang" width="150" />
+</p>
 
-# Getting Started
+<p align="center">
+  <b>Algorithm Engineer @ 360 Company</b><br/>
+  Multimodal LLMs · Multi-Agent Collaboration · World Models
+</p>
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+<p align="center">
+  <a href="https://ryanskytree.github.io/homepage"><img src="https://img.shields.io/badge/Website-Live-2ea44f?logo=githubpages&logoColor=white" alt="Website" /></a>
+  <a href="https://scholar.google.com/citations?user=ON-RcMgAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google%20Scholar-4285F4?logo=googlescholar&logoColor=white" alt="Google Scholar" /></a>
+  <a href="https://orcid.org/0009-0004-7358-8076"><img src="https://img.shields.io/badge/ORCID-A6CE39?logo=orcid&logoColor=white" alt="ORCID" /></a>
+  <a href="mailto:xling.zhang@outlook.com"><img src="https://img.shields.io/badge/Email-xling.zhang@outlook.com-D14836?logo=maildotru&logoColor=white" alt="Email" /></a>
+</p>
 
-See more info at https://academicpages.github.io/
+---
 
-### Additional Tutorials
+## About
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+This repository hosts my personal academic & professional homepage, built with the
+[Academic Pages](https://academicpages.github.io/) theme (a Jekyll fork of Minimal Mistakes).
 
-## Running locally
+I am an **Algorithm Engineer at 360 Company**, with a strong interest in **Multimodal Large
+Language Models, Multi-Agent Collaboration, and World Models**. My research expertise spans
+Graph Machine Learning, Continual Learning, and AI Security, focusing on developing efficient,
+scalable, and interpretable learning systems.
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+I received my Master of Computer Science from **Universiti Sains Malaysia (USM)**, and have
+worked with the **Shenzhen Institute of Advanced Technology (SIAT), Chinese Academy of Sciences**
+and **The Hong Kong University of Science and Technology (Guangzhou)**. My work has been
+published at venues such as **ICML** and **ICASSP**.
 
-1. Clone the repository and made updates as detailed above.
+📫 Reach me at [xling.zhang@outlook.com](mailto:xling.zhang@outlook.com).
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
+## Research Interests
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+- Multimodal Large Language Models
+- Multi-Agent Collaboration & World Models
+- Continual Learning & Continual Graph Learning
+- Graph Neural Networks & Graph Diffusion Models
+- Dynamic Graph Learning
+- AI Security & Endpoint Detection and Response (EDR)
+- Explainable AI & Retrieval-Augmented Intelligence
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+## Selected Publications
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+| Year | Venue | Title |
+| :--- | :---- | :---- |
+| 2026 | ICML 2026 | **WatchLog: From a Glimpse to Decision** — Rapid Event Reasoning in EDR Logs with Multimodal LLMs |
+| 2026 | TPAMI (subm.) | **AL-GNN: Privacy-Preserving and Replay-Free Continual Graph Learning via Analytic Learning** |
+| 2026 | ICASSP 2026 *(oral)* | **Enhanced Graph Neural Networks Using K-Hop Gaussian Diffusion** |
+| 2021 | AEECA 2021 *(oral)* | **A COVID-19 Prediction Model Based on Neural Network** |
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+See the [Publications page](https://ryanskytree.github.io/homepage/publications/) for the full list.
 
-## Using Docker
+## Site Structure
 
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
+```
+├── _config.yml          # Site-wide settings (title, author, links, collections…)
+├── _data/
+│   ├── navigation.yml   # Top navigation menu items
+│   └── cv.json          # Structured CV data
+├── _pages/              # Standalone pages (About, CV, Publications, …)
+│   ├── about.md         # Homepage  →  /
+│   └── cv.md            # CV page   →  /cv/
+├── _publications/       # One Markdown file per publication
+├── _talks/              # Talks
+├── _posts/              # Blog posts
+├── images/              # Avatar, posters, and institution logos
+└── files/               # Downloadable files (e.g. PDFs)
+```
 
-You can build and execute the container by running the following command in the repository:
+## Local Development
+
+Preview the site locally before pushing changes.
+
+### With Docker (recommended)
 
 ```bash
-chmod -R 777 .
 docker compose up
 ```
 
-You should now be able to access the website from `localhost:4000`.
+Then open <http://localhost:4000/homepage/>.
 
-### Using the DevContainer in VS Code
+### With Ruby / Jekyll
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+```bash
+# macOS
+brew install ruby node
+gem install bundler
 
-# Maintenance
+# install dependencies
+bundle install
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+# serve with live reload at http://localhost:4000/homepage/
+jekyll serve -l -H localhost
+```
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+> Changes to Markdown/HTML rebuild automatically. Changes to `_config.yml` require restarting
+> the server.
 
-## Bugfixes and enhancements
+## Editing Content
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+- **Site title, author info, social links** → `_config.yml`
+- **Homepage text & biography** → `_pages/about.md`
+- **CV** → `_pages/cv.md` and `_data/cv.json`
+- **Add a publication** → drop a new Markdown file in `_publications/`
+- **Navigation menu** → `_data/navigation.yml`
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+## License & Credits
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Site content © Xuling Zhang. Theme based on
+[Academic Pages](https://github.com/academicpages/academicpages.github.io) by Stuart Geiger,
+which is a fork of [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) by
+Michael Rose — both released under the MIT License (see [LICENSE](LICENSE)).
