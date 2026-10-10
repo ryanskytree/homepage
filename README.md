@@ -59,18 +59,23 @@ See the [Publications page](https://ryanskytree.github.io/homepage/publications/
 ## Site Structure
 
 ```
-├── _config.yml          # Site-wide settings (title, author, links, collections…)
+├── _config.yml           # Site-wide settings (title, author, links, collection…)
 ├── _data/
-│   ├── navigation.yml   # Top navigation menu items
-│   └── cv.json          # Structured CV data
-├── _pages/              # Standalone pages (About, CV, Publications, …)
-│   ├── about.md         # Homepage  →  /
-│   └── cv.md            # CV page   →  /cv/
-├── _publications/       # One Markdown file per publication
-├── _talks/              # Talks
-├── _posts/              # Blog posts
-├── images/              # Avatar, posters, and institution logos
-└── files/               # Downloadable files (e.g. PDFs)
+│   ├── navigation.yml    # Top navigation menu items
+│   ├── ui-text.yml       # UI label strings
+│   └── authors.yml       # Author profile data
+├── _pages/               # Standalone pages
+│   ├── about.md          # Homepage       →  /
+│   ├── publications.html # Publications   →  /publications/
+│   ├── cv.md             # CV             →  /cv/
+│   └── 404.md            # Not-found page
+├── _publications/        # One Markdown file per publication
+├── images/               # Avatar, paper posters, institution logos, favicons
+├── files/                # Downloadable files (e.g. PDFs)
+├── assets/               # CSS / JS / fonts
+├── _includes/            # Theme partials
+├── _layouts/             # Theme layouts
+└── _sass/                # Theme styles (SCSS)
 ```
 
 ## Local Development
@@ -106,7 +111,7 @@ jekyll serve -l -H localhost
 
 - **Site title, author info, social links** → `_config.yml`
 - **Homepage text & biography** → `_pages/about.md`
-- **CV** → `_pages/cv.md` and `_data/cv.json`
+- **CV** → `_pages/cv.md`
 - **Add a publication** → drop a new Markdown file in `_publications/`
 - **Navigation menu** → `_data/navigation.yml`
 
